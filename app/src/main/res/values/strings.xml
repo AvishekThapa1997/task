@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Task</string>
+    <string name="icon_image">icon_image</string>
+    <string name="image">image</string>
+    <string name="get_started">GET STARTED</string>
+    <string name="avail_best_offer_amp_discount_only_for_you"><![CDATA[Avail Best Offer & Discount Only For You]]></string>
+    <string name="hurry">HURRY!!</string>
+    <string name="hunger_dont_wait">HUNGER DON\'T WAIT</string>
+    <string name="continue_with_login">CONTINUE WITH LOGIN</string>
+    <string name="already_a_tiffin_member">Already a Tiffin Member?</string>
+    <string name="login">LOGIN</string>
+    <string name="terms_and_conditions"><![CDATA[By Continuing,You Agree To Our Terms Of Service & Privacy Policy]]></string>
+    <string name="enter_number">Enter Your Mobile Number</string>
+    <string name="continue_with_facebook">Continue With Facebook</string>
+    <string name="continue_with_google">Continue With Google</string>
+    <string name="continue_with_mail">Continue With Mail</string>
+    <string name="enter_password">Enter Your Password</string>
+    <string name="proceed">PROCEED</string>
+    <string name="indian_phonenumber_code">+91</string>
+    <string name="content_description">Image</string>
+    <string name="success">LOGIN IS SUCCESS</string>
+    <string name="invalid_credentials">CREDENTIALS CANNOT BE EMPTY</string>
+    <string name="failure">CHECK YOUR CREDENTIALS</string>
+    <string name="connection">NO INTERNET CONNECTION</string>
+</resources>
