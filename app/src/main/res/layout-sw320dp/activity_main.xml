@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="MainActivityBinding">
+
+        <variable
+            name="listener"
+            type="com.harry.example.task.ui.MainActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_background">
+
+
+        <ImageView
+            android:id="@+id/background_image1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/content_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg2_1"
+            app:layout_constraintBottom_toTopOf="@id/get_started_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/get_started_image"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:onClick="@{() -> listener.toLoginActivity()}"
+            android:scaleType="centerCrop"
+            android:src="@drawable/button_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/background_image1"
+            app:riv_corner_radius="10dp" />
+
+        <TextView
+            android:id="@+id/get_started"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/arimo_regular"
+            android:text="@string/get_started"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/get_started_image"
+            app:layout_constraintEnd_toEndOf="@id/get_started_image"
+            app:layout_constraintStart_toStartOf="@id/get_started_image"
+            app:layout_constraintTop_toTopOf="@id/get_started_image" />
+
+        <TextView
+            android:id="@+id/discount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/arimo_regular"
+            android:text="@string/avail_best_offer_amp_discount_only_for_you"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/get_started_image"
+            app:layout_constraintEnd_toEndOf="@id/get_started_image"
+            app:layout_constraintStart_toStartOf="@id/get_started_image"
+            app:layout_constraintTop_toBottomOf="@id/get_started" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="60dp"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/object_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hurry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/arimo_bold"
+            android:text="@string/hurry"
+            android:textColor="@color/textColorBlack"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/background_image1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arimo_bolditalic"
+            android:text="@string/hunger_dont_wait"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/hurry"
+            app:layout_constraintTop_toBottomOf="@id/hurry" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/continue_with_login"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:src="@drawable/button_secndry"
+            app:layout_constraintBottom_toTopOf="@id/already_a_member"
+            app:layout_constraintEnd_toEndOf="@id/get_started_image"
+            app:layout_constraintStart_toStartOf="@+id/get_started_image"
+            app:layout_constraintTop_toBottomOf="@id/get_started_image" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/already_a_member"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/button_secndry"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/get_started_image"
+            app:layout_constraintStart_toStartOf="@id/get_started_image"
+            app:layout_constraintTop_toBottomOf="@id/continue_with_login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arimo_bold"
+            android:text="@string/continue_with_login"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/continue_with_login"
+            app:layout_constraintEnd_toEndOf="@id/continue_with_login"
+            app:layout_constraintStart_toStartOf="@id/continue_with_login"
+            app:layout_constraintTop_toTopOf="@id/continue_with_login" />
+
+        <TextView
+            android:id="@+id/has_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arimo_bold"
+            android:text="@string/already_a_tiffin_member"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/already_a_member"
+            app:layout_constraintEnd_toEndOf="@id/already_a_member"
+            app:layout_constraintStart_toStartOf="@id/already_a_member"
+            app:layout_constraintTop_toTopOf="@id/already_a_member" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arimo_regular"
+            android:onClick="@{()->listener.toLoginActivity()}"
+            android:text="@string/login"
+            android:textColor="@color/loginColor"
+            app:layout_constraintBottom_toBottomOf="@id/has_account"
+            app:layout_constraintStart_toEndOf="@id/has_account"
+            app:layout_constraintTop_toTopOf="@id/has_account" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

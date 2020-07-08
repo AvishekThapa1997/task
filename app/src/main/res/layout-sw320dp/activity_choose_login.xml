@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ChooseLoginBinding">
+
+        <variable
+            name="listener"
+            type="com.harry.example.task.ui.ChooseLogin" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_background"
+        tools:context=".ui.ChooseLogin">
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg2_2"
+            app:layout_constraintBottom_toTopOf="@id/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/content_description" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/object_2"
+            app:layout_constraintBottom_toBottomOf="@id/background_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/content_description" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/arimo_bold"
+            android:text="@string/login"
+            android:textColor="@color/textColorBlack"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/background_image"
+            app:layout_constraintTop_toBottomOf="@id/background_image" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/enter_mobile_number"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:onClick="@{()->listener.toLoginActivity()}"
+            android:src="@drawable/button_secndry"
+            app:layout_constraintBottom_toTopOf="@id/continue_with_facebook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/login"
+            app:layout_constraintTop_toBottomOf="@id/login"
+            app:riv_corner_radius="10dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/continue_with_facebook"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/button_secndry"
+            app:layout_constraintBottom_toTopOf="@id/continue_with_google"
+            app:layout_constraintEnd_toEndOf="@+id/enter_mobile_number"
+            app:layout_constraintStart_toStartOf="@id/enter_mobile_number"
+            app:layout_constraintTop_toBottomOf="@id/enter_mobile_number"
+            app:riv_corner_radius="10dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/continue_with_google"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/button_secndry"
+            app:layout_constraintBottom_toTopOf="@id/continue_with_mail"
+            app:layout_constraintEnd_toEndOf="@+id/continue_with_facebook"
+            app:layout_constraintStart_toStartOf="@id/enter_mobile_number"
+            app:layout_constraintTop_toBottomOf="@id/continue_with_facebook"
+            app:riv_corner_radius="10dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/continue_with_mail"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/button_secndry"
+            app:layout_constraintBottom_toTopOf="@id/terms_and_conditions"
+            app:layout_constraintEnd_toEndOf="@+id/continue_with_google"
+            app:layout_constraintStart_toStartOf="@id/enter_mobile_number"
+            app:layout_constraintTop_toBottomOf="@id/continue_with_google"
+            app:riv_corner_radius="10dp" />
+
+        <TextView
+            android:id="@+id/terms_and_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/textColorBlack"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/continue_with_mail"
+            app:layout_constraintStart_toStartOf="@+id/continue_with_mail"
+            app:layout_constraintTop_toBottomOf="@id/continue_with_mail" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/mobile_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@mipmap/icon_mobile_round"
+            app:layout_constraintBottom_toBottomOf="@id/enter_mobile_number"
+            app:layout_constraintStart_toStartOf="@id/enter_mobile_number"
+            app:layout_constraintTop_toTopOf="@id/enter_mobile_number"
+            app:riv_corner_radius="10dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/facebook_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@mipmap/icon_fb_round"
+            app:layout_constraintBottom_toBottomOf="@id/continue_with_facebook"
+            app:layout_constraintStart_toStartOf="@id/mobile_icon"
+            app:layout_constraintTop_toTopOf="@id/continue_with_facebook"
+            app:riv_corner_radius="10dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/google_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@mipmap/icon_google_round"
+            app:layout_constraintBottom_toBottomOf="@id/continue_with_google"
+            app:layout_constraintStart_toStartOf="@id/facebook_icon"
+            app:layout_constraintTop_toTopOf="@id/continue_with_google"
+            app:riv_corner_radius="10dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/mail_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@mipmap/icon_mobile_round"
+            app:layout_constraintBottom_toBottomOf="@id/continue_with_mail"
+            app:layout_constraintStart_toStartOf="@id/google_icon"
+            app:layout_constraintTop_toTopOf="@id/continue_with_mail"
+            app:riv_corner_radius="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arimo_bold"
+            android:text="@string/enter_number"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/enter_mobile_number"
+            app:layout_constraintStart_toEndOf="@id/mobile_icon"
+            app:layout_constraintTop_toTopOf="@id/enter_mobile_number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arimo_bold"
+            android:text="@string/continue_with_facebook"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/continue_with_facebook"
+            app:layout_constraintStart_toEndOf="@id/facebook_icon"
+            app:layout_constraintTop_toTopOf="@id/continue_with_facebook" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arimo_bold"
+            android:text="@string/continue_with_google"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/continue_with_google"
+            app:layout_constraintStart_toEndOf="@id/google_icon"
+            app:layout_constraintTop_toTopOf="@id/continue_with_google" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arimo_bold"
+            android:text="@string/continue_with_mail"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/continue_with_mail"
+            app:layout_constraintStart_toEndOf="@id/mail_icon"
+            app:layout_constraintTop_toTopOf="@id/continue_with_mail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
